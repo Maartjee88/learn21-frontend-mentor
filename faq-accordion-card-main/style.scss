@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$text: hsl(240, 6%, 50%);
+$dark-text: hsl(237, 12%, 33%);
+$darker-text: hsl(238, 29%, 16%);
+$red-text: hsl(14, 88%, 65%);
+$white: hsl(255, 5%, 91%);
+
+$gradient-start: hsl(240, 73%, 65%);
+$gradient-end: hsl(273, 75%, 66%);
+
+$divider: hsl(240, 5%, 91%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    width: 100%;
+    min-height: 100vh;
+    background: $gradient-start;
+    background: linear-gradient(0deg, $gradient-start 0%, $gradient-end 100%);
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.faq-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white-text;
+    width: 920px;
+    height: 510px;
+    margin: 8rem auto;
+    border-radius: 1.5rem;
+
+    &--box {
+        position: absolute;
+        width: 190px;
+        height: 183px;
+        transform: translate(-93px, 210px);
+    }
+
+    &__image {
+        height: 100%;
+        width: 50%;
+        background: no-repeat -4.5rem center  url(images/illustration-woman-online-desktop.svg);
+    }
+
+    &__faq {
+        width: 50%;
+        padding: 0 1rem;
+
+        h2.title {
+            font-weight: 700;
+            font-size: 32px;
+            letter-spacing: 1px;
+            color: $darker-text;
+            margin-bottom: 1rem;
+          }
+          
+        details {
+            color: $text;
+            padding: 1.3rem 0;
+            border-bottom: 1px solid $divider;
+            font-size: 14px;
+            width: 80%;
+            
+            summary {
+                display: flex;
+                justify-content: space-between;
+                list-style-type: none;
+                color: $dark-text;
+
+                &::marker {
+                    display: none;
+                }
+
+                &::after{
+                    content: url(images/icon-arrow-down.svg);
+                    color: $red-text;
+                }
+            }
+        }
+          
+        details[open] {
+            summary {
+                color: $darker-text;
+                font-weight: 700;
+                margin-bottom: 1rem;
+
+                &::after{
+                    transform: rotate(180deg);
+                }
+            }   
+        }
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: $white-text;
+    margin-bottom: 1rem;
+
+    a { 
+        color: $red-text; 
+    }
+}
+

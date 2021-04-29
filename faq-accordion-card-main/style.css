@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  width: 100%;
+  min-height: 100vh;
+  background: #6565e7;
+  background: -webkit-gradient(linear, left bottom, left top, from(#6565e7), to(#af67e9));
+  background: linear-gradient(0deg, #6565e7 0%, #af67e9 100%);
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.faq-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e7e7e9;
+  width: 920px;
+  height: 510px;
+  margin: 8rem auto;
+  border-radius: 1.5rem;
+}
+
+.faq-block--box {
+  position: absolute;
+  width: 190px;
+  height: 183px;
+  -webkit-transform: translate(-93px, 210px);
+          transform: translate(-93px, 210px);
+}
+
+.faq-block__image {
+  height: 100%;
+  width: 50%;
+  background: no-repeat -4.5rem center url(images/illustration-woman-online-desktop.svg);
+}
+
+.faq-block__faq {
+  width: 50%;
+  padding: 0 1rem;
+}
+
+.faq-block__faq h2.title {
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 1px;
+  color: #1d1e35;
+  margin-bottom: 1rem;
+}
+
+.faq-block__faq details {
+  color: #787887;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid #e7e7e9;
+  font-size: 14px;
+  width: 80%;
+}
+
+.faq-block__faq details summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  color: #4a4b5e;
+}
+
+.faq-block__faq details summary::marker {
+  display: none;
+}
+
+.faq-block__faq details summary::after {
+  content: url(images/icon-arrow-down.svg);
+  color: #f47c57;
+}
+
+.faq-block__faq details[open] summary {
+  color: #1d1e35;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.faq-block__faq details[open] summary::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #e7e7e9;
+  margin-bottom: 1rem;
+}
+
+.attribution a {
+  color: #f47c57;
+}
+/*# sourceMappingURL=style.css.map */
